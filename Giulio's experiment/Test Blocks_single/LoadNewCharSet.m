@@ -4,7 +4,8 @@
 %     E.Stim.C    = 1:18;
 % end
 
-load("WordLists\PptLists - 28-Jul-2025 15-09-33.mat")
+fn = fullfile("WordLists", "PptLists - 28-Jul-2025 15-09-33.mat");
+load(fn);
 
 E.Stim.C    = PptLists.CharSet(str2double(E.sbj.n),:);
 

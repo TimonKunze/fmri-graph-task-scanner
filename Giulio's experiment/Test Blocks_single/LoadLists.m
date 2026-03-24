@@ -2,7 +2,8 @@
 % We get the list number from a separate matfile
 % Then, based on block number, we load the corresponding file
 
-load("WordLists\PptLists - 28-Jul-2025 15-09-33.mat")
+fn = fullfile("WordLists", "PptLists - 28-Jul-2025 15-09-33.mat");
+load(fn);
 
 E.Stim.StimList       = PptLists.Lists(str2double(E.sbj.n), E.sbj.block + 1);
 E.Stim.WordLists      = nan(E.times.NBlocks,E.times.NWords);
